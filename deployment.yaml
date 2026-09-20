@@ -1,0 +1,23 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-nginx
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: jenkins-nginx
+
+  template:
+    metadata:
+      labels:
+        app: jenkins-nginx
+
+    spec:
+      containers:
+        - name: nginx
+          image: IMAGE_URI
+          ports:
+            - containerPort: 80
+
