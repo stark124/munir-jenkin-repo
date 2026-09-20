@@ -5,8 +5,8 @@ pipeline {
     environment {
         AWS_REGION = 'us-east-1'
         ECR_REPO = 'munir-jenkin-repo'
-        EKS_CLUSTER = 'live-tech-eks'
-        AWS_ACCOUNT_ID = '965444437141'
+        EKS_CLUSTER = 'alchemy-eks-jenkins'
+        AWS_ACCOUNT_ID = '992382458064'
 
         ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         IMAGE_TAG = "${BUILD_NUMBER}"
